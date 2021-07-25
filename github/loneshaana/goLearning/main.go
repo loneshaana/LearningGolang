@@ -17,11 +17,11 @@ func main() {
 	println("Register root handler")
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { // register the handler
 		names := r.URL.Query()["name"] // query parameters
-		var name string
+		var name string                // i have a variable name of type string
 		if len(names) == 1 {
 			name = names[0]
 		}
-		m := map[string]string{"name": name}
+		m := map[string]string{"name": name} // dynamic variable declaration
 		enc := json.NewEncoder(w)
 		enc.Encode(m)
 		// w.Write([]byte("Hello " + name)) // convert string to bytes , cascading
@@ -34,7 +34,6 @@ func main() {
 }
 
 /*
-// check for logs in log file
 func main() {
 	// command line arguments
 	path := flag.String("path", "myapp.log", "The path to the log that should be analyzed")

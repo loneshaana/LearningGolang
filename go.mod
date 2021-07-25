@@ -1,3 +1,3 @@
-module loneshaana/go/go-learning
+module github/loneshaana/goLearning
 
 go 1.16
