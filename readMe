@@ -1,0 +1,69 @@
+1. Service Discovery
+2. Load Balancing
+3. Distributed Tracing And Logging
+4. Service Monitoring
+
+Types of Distributed Systems
+1. Hub and  Spoke , All service will communicate with central service (Single point of failure)
+    a. Great for centralized tracing and logs
+2. Peer to Peer
+    a. Highly Decoupled
+    b. service discovery can be hard
+    c. Load Balancing can be tricky
+3. Message Queues(RabitMq)
+4. Hybrid 
+
+Architecturl Elements
+1. Languages which we will be  supporting
+2. Frameworks
+3. what transport  we are  going to use
+4. protocols which  are availables
+5. how  are the messages sent , do  we need netural format
+6. Are we a monoculture , are we use Go everywhere(Single Language)
+7. Are architectures compatible
+8. Do they support required transports and protocols
+9. How stable are they? , are they easy to  upgrade
+
+
+Transport:
+HTTP ,  gRPC,  Other RPC ,  Mixed
+
+
+Protocols:
+    encoding/gob
+    JSON
+    protocol Buffers
+    XML ,SOAP
+    Mixed
+
+
+What we will  be Building
+
+Elements         |       Our  Choice
+1. Type          |       Hybrid - Central  Registry and monitoring
+2. Language      |       Go
+3. Frameworks    |       None
+4. Transports    |       HTTP
+5. Protocols     |       JSON
+
+
+Gradebook Application:
+
+
+
+
+
+                                                                     Log Service
+                                                                        /
+                                                                       / 
+                                                                      /
+                                                                     /
+Client -------------> Teacher Portal ------------> Service Registry /
+                                                                    \
+                                                                     \
+                                                                      \
+                                                                       \
+                                                                        \
+                                                                    Grading  Service
+
+
